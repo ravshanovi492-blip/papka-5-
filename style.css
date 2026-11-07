@@ -1,0 +1,467 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(circle at 15% 15%, #283d78 0, transparent 30%),
+    radial-gradient(circle at 85% 40%, #45216d 0, transparent 30%),
+    linear-gradient(135deg, #080e20, #111a35 55%, #090d1c);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "📚       ✨          📖             🎓";
+  position: fixed;
+  inset: 0;
+  font-size: 55px;
+  opacity: 0.035;
+  line-height: 180px;
+  word-spacing: 80px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  background: rgba(8, 14, 32, 0.92);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #ffffff18;
+}
+
+.logo {
+  color: #8ec5ff;
+  font-size: 25px;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #dce7ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: #75c7ff;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 100px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 620px;
+  animation: appear 1s ease;
+}
+
+.tag, .section-heading span {
+  color: #80c9ff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.1;
+  margin: 25px 0;
+}
+
+.hero h1 span {
+  color: #83c8ff;
+}
+
+.hero p, .section-heading p {
+  color: #b6c5df;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.main-btn, button {
+  display: inline-block;
+  background: linear-gradient(100deg, #397ce8, #925be8);
+  color: white;
+  padding: 14px 25px;
+  border: 0;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 22px;
+}
+
+.main-btn:hover, button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px #497fe966;
+}
+
+.hero-art {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #253f85, #7544b0);
+  display: grid;
+  place-items: center;
+  position: relative;
+  box-shadow: 0 0 100px #5688ff55;
+  animation: float 4s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+.book {
+  font-size: 125px;
+}
+
+.floating {
+  position: absolute;
+  font-size: 45px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.f1 { top: 0; right: 0; }
+.f2 { bottom: 10px; left: 0; }
+.f3 { top: 40%; right: -30px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 7%;
+}
+
+.stats div, .about-card, .course, .game-card,
+.quiz-card, .contact-form, .game-area {
+  background: #ffffff0c;
+  border: 1px solid #ffffff18;
+  border-radius: 20px;
+  padding: 27px;
+  backdrop-filter: blur(12px);
+}
+
+.stats div { text-align: center; }
+.stats h2 { color: #8bcaff; font-size: 35px; }
+.stats p { color: #aebdd8; margin-top: 8px; }
+
+.section {
+  padding: 90px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+  font-size: 36px;
+  margin: 17px 0;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.about-card p, .course p, .game-card p {
+  color: #b6c5df;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+
+.about-icon {
+  font-size: 70px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.course, .game-card {
+  transition: .3s;
+}
+
+.course:hover, .game-card:hover {
+  transform: translateY(-8px);
+  border-color: #79baff;
+}
+
+.course-icon {
+  font-size: 45px;
+  margin-bottom: 18px;
+}
+
+.course h3, .game-card h3 {
+  font-size: 20px;
+}
+
+.course span {
+  display: inline-block;
+  color: #8fc9ff;
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+.game-section {
+  background: #111c37aa;
+}
+
+.game-card {
+  text-align: center;
+}
+
+.game-card button {
+  width: 100%;
+}
+
+.score-box {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 20px;
+  color: #a8d5ff;
+}
+
+.score-box strong {
+  color: #ffda73;
+}
+
+.game-area {
+  max-width: 600px;
+  min-height: 130px;
+  margin: auto;
+  text-align: center;
+}
+
+.quiz-card {
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.answers button {
+  margin: 0;
+}
+
+#quiz-result, #form-status {
+  margin-top: 18px;
+  color: #9dd2ff;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 16px;
+  background: #101a32;
+  color: white;
+  border: 1px solid #43567d;
+  border-radius: 10px;
+  outline: none;
+  font: inherit;
+}
+
+input:focus, textarea:focus {
+  border-color: #7ac4ff;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  background: #070c19;
+  color: #aebdd8;
+  line-height: 2;
+}
+
+footer h2 {
+  color: #83c8ff;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .hero { flex-direction: column; text-align: center; }
+  .hero-art { width: 240px; height: 240px; }
+}
+
+@media(max-width: 600px) {
+  .navbar { flex-direction: column; gap: 18px; }
+  nav { justify-content: center; gap: 14px; }
+  .stats { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .section { padding: 65px 6%; }
+  .answers { grid-template-columns: 1fr; }
+  .about-card { flex-direction: column; text-align: center; }
+}
+
+/* BILIMDON - MAXSUS ORQA FON */
+
+body {
+  margin: 0;
+  color: white;
+  background:
+    linear-gradient(rgba(5, 12, 35, 0.87), rgba(8, 13, 38, 0.94)),
+    url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=85&w=1920") center/cover fixed;
+  background-color: #08152e;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Yorqin rangli yorug'liklar */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  left: -150px;
+  border-radius: 50%;
+  background: #2869ff;
+  filter: blur(150px);
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+  border-radius: 50%;
+  background: #9c35ff;
+  filter: blur(150px);
+  opacity: 0.22;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Bosh sahifa */
+
+.hero {
+  background:
+    linear-gradient(90deg, #07142ee8, #101c40aa),
+    url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=85&w=1920")
+    center/cover no-repeat;
+  min-height: 570px;
+  border-radius: 0 0 35px 35px;
+}
+
+/* Darslar oynasi */
+
+.course,
+.game-card,
+.quiz-card,
+.about-card,
+.contact-form,
+.game-area {
+  background: rgba(17, 31, 66, 0.78);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(132, 181, 255, 0.25);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Orqa fondagi bezaklar */
+
+.background-decoration {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.background-decoration span {
+  position: absolute;
+  display: block;
+  font-size: 35px;
+  opacity: 0.12;
+  animation: bookFloat 8s infinite ease-in-out;
+}
+
+.background-decoration span:nth-child(1) {
+  top: 15%;
+  left: 5%;
+}
+
+.background-decoration span:nth-child(2) {
+  top: 45%;
+  right: 8%;
+  animation-delay: 2s;
+}
+
+.background-decoration span:nth-child(3) {
+  bottom: 15%;
+  left: 12%;
+  animation-delay: 4s;
+}
+
+@keyframes bookFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(8deg);
+  }
+}

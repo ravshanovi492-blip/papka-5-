@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilimdon O‘quv Markazi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="#">🎓 BILIMDON</a>
+  <nav>
+    <a href="#home">Bosh sahifa</a>
+    <a href="#lessons">Darslar</a>
+    <a href="#games">O‘yinlar</a>
+    <a href="#quiz">Savollar</a>
+    <a href="#contact">Aloqa</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="tag">🚀 Kelajak sari birinchi qadam</span>
+    <h1>Bilim bilan <span>kelajakni</span> yarat!</h1>
+    <p>
+      BILIMDON o‘quv markazida yangi bilimlarni o‘rgan,
+      qiziqarli o‘yinlarda qatnash va o‘z mahoratingni sinab ko‘r!
+    </p>
+    <a href="#lessons" class="main-btn">Darslarni boshlash →</a>
+  </div>
+  <div class="hero-art">
+    <div class="book">📚</div>
+    <div class="floating f1">💡</div>
+    <div class="floating f2">🎓</div>
+    <div class="floating f3">⭐</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><h2>10+</h2><p>O‘quv kurslari</p></div>
+  <div><h2>50+</h2><p>Qiziqarli savollar</p></div>
+  <div><h2>100%</h2><p>Yangi imkoniyatlar</p></div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-heading">
+    <span>📖 BIZ HAQIMIZDA</span>
+    <h2>Bilimdon — bilimlar maskani</h2>
+    <p>Bizning maqsadimiz yoshlarning bilimini oshirish va kelajakka tayyorlash.</p>
+  </div>
+  <div class="about-card">
+    <div class="about-icon">🏫</div>
+    <div>
+      <h3>Biz bilan o‘rganish oson!</h3>
+      <p>
+        Darslar, amaliy mashg‘ulotlar, testlar va o‘yinlar orqali
+        o‘quvchilar o‘z bilimlarini mustahkamlashlari mumkin.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="lessons">
+  <div class="section-heading">
+    <span>📚 TA'LIM OLAMIGA XUSH KELIBSIZ</span>
+    <h2>Bizning darslarimiz</h2>
+    <p>O‘zingga yoqqan yo‘nalishni tanla!</p>
+  </div>
+  <div class="cards">
+    <article class="course">
+      <div class="course-icon">💻</div>
+      <h3>IT va dasturlash</h3>
+      <p>HTML, CSS, JavaScript va web-sayt yaratish.</p>
+      <span>Amaliy mashg‘ulotlar</span>
+    </article>
+    <article class="course">
+      <div class="course-icon">🇬🇧</div>
+      <h3>Ingliz tili</h3>
+      <p>Grammatika, yangi so‘zlar va suhbatlashish.</p>
+      <span>Til o‘rganish</span>
+    </article>
+    <article class="course">
+      <div class="course-icon">🔢</div>
+      <h3>Matematika</h3>
+      <p>Misollar, masalalar va mantiqiy fikrlash.</p>
+      <span>Hisoblash mashqlari</span>
+    </article>
+    <article class="course">
+      <div class="course-icon">🔬</div>
+      <h3>Fizika</h3>
+      <p>Tabiat hodisalari va ilmiy tajribalar.</p>
+      <span>Ilm-fan</span>
+    </article>
+  </div>
+</section>
+
+<section class="section game-section" id="games">
+  <div class="section-heading">
+    <span>🎮 BILIMDON ARENASI</span>
+    <h2>Qiziqarli o‘yinlar</h2>
+    <p>O‘yna, bilim ol va ball to‘pla!</p>
+  </div>
+
+  <div class="cards">
+    <article class="game-card">
+      <div class="course-icon">🧠</div>
+      <h3>Bilimlar jangi</h3>
+      <p>Savollarga javob berib, bilimlaringni sinab ko‘r.</p>
+      <button onclick="startQuiz()">O‘yinni boshlash →</button>
+    </article>
+    <article class="game-card">
+      <div class="course-icon">⚡</div>
+      <h3>Tezkor hisob</h3>
+      <p>Matematik misollarni yechib, ball yig‘.</p>
+      <button onclick="startMathGame()">O‘yinni boshlash →</button>
+    </article>
+  </div>
+
+  <div class="score-box">
+    🏆 Sening ballaring: <strong id="score">0</strong>
+  </div>
+  <div id="game-area" class="game-area">
+    <h3>🎯 O‘yin boshlash uchun yuqoridagi tugmani bos!</h3>
+  </div>
+</section>
+
+<section class="section" id="quiz">
+  <div class="section-heading">
+    <span>📝 O‘ZINGNI SINAB KO‘R</span>
+    <h2>Bilimdon savollari</h2>
+    <p>To‘g‘ri javob ber va ball to‘pla.</p>
+  </div>
+  <div class="quiz-card">
+    <h3 id="question">HTML nimani anglatadi?</h3>
+    <div id="answers" class="answers"></div>
+    <p id="quiz-result"></p>
+    <button class="main-btn" id="next-question" onclick="nextQuestion()">Keyingi savol →</button>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-heading">
+    <span>📩 BIZ BILAN BOG‘LANING</span>
+    <h2>Telegram orqali xabar yubor</h2>
+    <p>Savolingni yoz. Xabaring o‘quv markazi Telegram botiga yuboriladi.</p>
+  </div>
+
+  <form id="contact-form" class="contact-form">
+    <input type="text" id="name" placeholder="Ismingiz" required>
+    <input type="text" id="phone" placeholder="Telefon raqamingiz" required>
+    <textarea id="message" placeholder="Xabaringizni yozing..." required></textarea>
+    <button type="submit" class="main-btn">📨 Telegramga yuborish</button>
+    <p id="form-status"></p>
+  </form>
+</section>
+
+<footer>
+  <h2>🎓 BILIMDON O‘QUV MARKAZI</h2>
+  <p>Bilim — kelajak kaliti!</p>
+  <p>© 2026 Barcha huquqlar himoyalangan.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href=".env">
